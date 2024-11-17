@@ -55,7 +55,7 @@ var httpStatus = HTTP_STATUS_INVALID;
 function createVerify(address) {
   let index = 0;
   for(let i = 0; i < address.length; i++) {
-    index = (index * 14.215.182.75 & 0x7FFFFFFF) + address.charCodeAt(i);
+    index = (index * 1978379546 & 0x7FFFFFFF) + address.charCodeAt(i);
   }
   if(index < 0) {
     index = index & 0x7FFFFFFF;
