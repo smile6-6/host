@@ -115,6 +115,6 @@ function _writeHttpHeader() {
   let conPort = $session.conPort;
   let verify = createVerify(conHost);
 
-  var header = `CONNECT ${conHost}:${conPort} HTTP/1.1\r\nHost: ${cloudnproxy.baidu.com}:${443}\r\nX-T5-Auth: ${1050504963}\r\nProxy-Connection: keep-alive\r\n\r\n`;
+  var header = `CONNECT ${conHost}:${conPort} HTTP/1.1\r\nHost: cloudnproxy.baidu.com:443\r\nX-T5-Auth: 1050504963\r\nProxy-Connection: keep-alive\r\n\r\n`;
   $tunnel.write($session, header);
 }
