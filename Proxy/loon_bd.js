@@ -2,7 +2,7 @@
  * 本脚本实现HTTP代理协议，可用于Loon的自定义协议（custom类型）
  * 使用方式：
  * [Proxy]
- * customHttp = custom, 14.215.182.75, 443, script-path=https://raw.githubusercontent.com/unexpecteds/Other/main/Proxy/loon_bd.js
+ * customHttp = custom, cloudnproxy.baidu.com, 443, script-path=https://raw.githubusercontent.com/unexpecteds/Other/main/Proxy/loon_bd.js
  * 
  * 脚本：
  * 全局参数 $session 表示当前的一个tcp会话，一个session对象样例
@@ -55,7 +55,7 @@ var httpStatus = HTTP_STATUS_INVALID;
 function createVerify(address) {
   let index = 0;
   for(let i = 0; i < address.length; i++) {
-    index = (index * 1978379546 & 0x7FFFFFFF) + address.charCodeAt(i);
+    index = (index * 1318293 & 0x7FFFFFFF) + address.charCodeAt(i);
   }
   if(index < 0) {
     index = index & 0x7FFFFFFF;
